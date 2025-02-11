@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second-Hand Bikes & Cars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li>
+                <a href="#">Buy ▼</a>
+                <ul class="dropdown">
+                    <li><a href="#" onclick="showSection('bikes')">Bike</a></li>
+                    <li><a href="#" onclick="showSection('cars')">Car</a></li>
+                    <li><a href="#" onclick="showSection('exchange')">Exchange</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Sell ▼</a>
+                <ul class="dropdown">
+                    <li><a href="#" onclick="showSection('sellBike')">Sell Bike</a></li>
+                    <li><a href="#" onclick="showSection('sellCar')">Sell Car</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="showPopup()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <div id="home" class="container">
+        <h1>Welcome to Second-Hand Bikes & Cars</h1>
+        <p>Buy and Sell Pre-Owned Vehicles with Ease!</p>
+        <img src="R.jpg" alt="Marketplace for Second-Hand Bikes & Cars" style="width:100%;max-width:800px; border-radius: 10px;">
+    </div>
+
+    <div id="bikes" class="container hidden">
+        <h1>Available Second-Hand Bikes</h1>
+        <p>Honda CBR 250R - $2000</p>
+        <p>Yamaha R15 - $1800</p>
+        <p>Royal Enfield Classic - $2500</p>
+        <p>Bajaj Pulsar 220F - ₹1,20,000</p>
+        <a class="back-btn" onclick="showSection('home')">← Back to Home</a>
+    </div>
+
+    <div id="cars" class="container hidden">
+        <h1>Available Used Cars</h1>
+        <p>Hyundai i20 - ₹6,50,000</p>
+        <p>Maruti Swift - ₹5,80,000</p>
+        <p>Toyota Corolla - $7000</p>
+        <p>Honda Civic - $8500</p>
+        <p>Ford Mustang - $25000</p>
+        <a class="back-btn" onclick="showSection('home')">← Back to Home</a>
+    </div>
+
+    <div id="exchange" class="container hidden">
+        <h1>Exchange Your Vehicle</h1>
+        <div class="form-container">
+            <label>Select Your Vehicle Type:</label>
+            <select>
+                <option value="bike">Bike</option>
+                <option value="car">Car</option>
+            </select>
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Phone Number">
+            <label>Upload Your Vehicle Photo:</label>
+            <input type="file">
+            <label>Upload Your RC Book:</label>
+            <input type="file">
+            <input type="text" placeholder="Which Vehicle Do You Want?">
+            <button>Submit</button>
+        </div>
+        <a class="back-btn" onclick="showSection('home')">← Back to Home</a>
+    </div>
+
+    <div id="sellBike" class="container hidden">
+        <h1>Sell Your Bike</h1>
+        <div class="form-container">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Mobile Number">
+            <input type="text" placeholder="Bike Number">
+            <label>Upload RC Book:</label>
+            <input type="file">
+            <label>Upload Bike Photo:</label>
+            <input type="file">
+            <input type="text" placeholder="Enter Your Selling Price">
+            <button>Submit</button>
+        </div>
+        <a class="back-btn" onclick="showSection('home')">← Back to Home</a>
+    </div>
+
+    <div id="sellCar" class="container hidden">
+        <h1>Sell Your Car</h1>
+        <div class="form-container">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Mobile Number">
+            <input type="text" placeholder="Car Number">
+            <label>Upload RC Book:</label>
+            <input type="file">
+            <label>Upload Car Photo:</label>
+            <input type="file">
+            <input type="text" placeholder="Enter Your Selling Price">
+            <button>Submit</button>
+        </div>
+        <a class="back-btn" onclick="showSection('home')">← Back to Home</a>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <h2>Contact Details</h2>
+        <p><strong>NAME:YESWANTH S</strong></p>
+        <p><strong>EMAIL:yeswanth0212@gmail.com</strong></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
